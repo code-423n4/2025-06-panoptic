@@ -82,6 +82,8 @@ contract PanopticVaultAccountant is Ownable {
     /// @notice Locks the vault from updating its pools hash.
     /// @dev This function can only be called by the owner of the contract.
     /// @param vault The address of the vault to lock
+
+//@audit M no mechanism to unlock vault
     function lockVault(address vault) external onlyOwner {
         vaultLocked[vault] = true;
     }
