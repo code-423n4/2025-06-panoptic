@@ -1,0 +1,167 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / panoptic-june
+==============================================================
+
+[06/27/2025 13:50] thebrittfactor (pinned)
+👋 Hello and welcome to the $18,000 in USDC Panoptic audit channel!
+
+📆 Audit opens Friday, 27 June 2025 20:00 (20:00 UTC) and runs through Monday, 07 July 2025 20:00 (20:00 UTC) (10 days).
+
+Please give a warm welcome to the Panoptic team, particularly @dyed | Panoptic, who will be available for questions via a PRIVATE thread in the PDT timezone. 
+
+**❗️A coded, runnable PoC is required for all High/Medium submissions to this audit.**
+- The repo includes a basic template to run the test suite.
+- PoCs must use the test suite provided in this repo.
+- Your submission will be marked as Insufficient if the POC is not runnable and working with the provided test suite.
+- Exception: PoC is optional (though recommended) for wardens with signal ≥ 0.68.
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in any thread (private or public) and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources. *Docs Wolf will be available when the audit is live.*
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2025-06-panoptic-hypovault
+
+{Reactions}
+c4ship (14) c4security (5) c4wins (4) 
+
+[06/27/2025 13:51] thebrittfactor
+Pinned a message.
+
+
+[06/27/2025 19:14] thebrittfactor
+ℹ️  DocsWolf will be available in a couple days. We'll alert as soon as it's ready.
+
+{Reactions}
+👍 (13) 
+
+[06/28/2025 11:13] thebrittfactor
+ℹ️ DocsWolf is now available.
+
+{Reactions}
+❤️ (15) 
+
+[07/02/2025 13:09] thebrittfactor
+❗It was brought to our attention that the `AccountingMath.sol` file was inadvertently included in the audit repo folders. However, this file is not part of the audit, nor in-scope, and has been removed.
+
+{Reactions}
+👍 (5) 
+
+[07/02/2025 20:20] thebrittfactor
+ℹ️ A few questions have been raised regarding tokens/token behaviors. Please ensure [this section](https://docs.code4rena.com/competitions/severity-categorization#unsupported-non-standard-tokens-and-fee-on-transfer-tokens) of our docs has been reviewed, as they have been recently standardized and are the source of truth.
+
+
+[07/07/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **Panoptic Hypovault** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Progress through the judging, awarding, and reporting phases can be tracked via [the audit page](<https://code4rena.com/audits/2025-06-panoptic-hypovault>).
+
+{Reactions}
+👏 (6) 🫡 (2) 
+
+[07/10/2025 09:22] aichainer
+@__141345__ Hi, Thanks for your judging. One question, please. Why the `arithmatic` problem is out of scope?
+
+
+[07/10/2025 09:23] __141345__
+https://github.com/code-423n4/2025-06-panoptic?tab=readme-ov-file#arithmetics
+
+{Embed}
+https://github.com/code-423n4/2025-06-panoptic?tab=readme-ov-file
+GitHub - code-423n4/2025-06-panoptic
+Contribute to code-423n4/2025-06-panoptic development by creating an account on GitHub.
+Code4rena - ARCHIVE-PUBLIC - panoptic-june [1380600111519895632].txt_Files/d7f29b6f-eac1-4cb3-a538-29494e17931c-DCD37
+
+{Reactions}
+👍 
+
+[07/10/2025 09:28] aichainer
+Thanks for your reply. As I understand, it mentioned about the performance fees and underflow/overflow problem in certain calculations. However, I think you marked all of issues not related to above problem as OOS. I hope you reconsider them.
+
+{Reactions}
+👆 👍 
+
+[07/10/2025 09:29] __141345__
+thanks for the reminding, will review
+
+{Reactions}
+👍 (2) 
+
+[07/21/2025 06:38] aichainer
+Hi, Thanks for your judging. Could you reconsider the severity of the [S-442 issue](https://code4rena.com/audits/2025-06-panoptic-hypovault/submissions/S-442)?
+This causes revert of the `manager`'s operation, in the specific cases. In other words, the  function of the protocol or its availability could be impacted.
+In accordance with the C4 rule, I think it can be [medium](https://docs.code4rena.com/competitions/severity-categorization#centralization-risks:~:text=2%20%E2%80%94%20Medium%3A%20Assets%20not%20at%20direct%20risk%2C%20but%20the%20function%20of%20the%20protocol%20or%20its%20availability%20could%20be%20impacted%2C%20or%20leak%20value%20with%20a%20hypothetical%20attack%20path%20with%20stated%20assumptions%2C%20but%20external%20requirements.) severity:
+```
+2 — Medium: Assets not at direct risk, but the function of the protocol or its availability could be impacted, or leak value with a hypothetical attack path with stated assumptions, but external requirements.
+```
+Since I don't have permission to add the comment to the issue, I add here. I am sorry and hope you feel free about it.
+
+{Reactions}
+👍 
+
+[07/21/2025 07:53] __141345__
+Hello, considering the following:
+- this is conditional, it could happen only if the manager cancel all the requests.
+- only the last user's request will be dosed, limited impact.
+- in the next epoch, when the manager fulfill in full, the problem is resolved.
+
+I think the severity is low.
+
+
+[07/24/2025 13:58] thebrittfactor
+🤑 🎉  Awards for **Panoptic Hypovault**:
+
+$7,946.50 USDC » @dhank
+$5,079.66 USDC » @Kvar
+$284.21 USDC » @YouCrossTheLineAlfie
+$189.47 USDC » @ngochungp295
+$154.63 USDC » @AlexCzm
+$126.32 USDC » @harshw
+$118.95 USDC » @wtp
+$118.95 USDC » @richa
+$118.95 USDC » @Godwin
+$118.95 USDC » @ro1sharkm
+$118.95 USDC » @dan__vinci
+$118.95 USDC » @0xneeloy
+$118.95 USDC » @0xAura
+$118.95 USDC » @JuggerNaut63
+$118.95 USDC » @TheWeb3Mechanic
+$89.21 USDC » @Egbe
+$59.47 USDC » @Petrus
+
+🏁 Findings summary
+--------------------------------------
+2 High risk findings
+0 Med risk findings
+1,129 wardens participated
+
+Top Hunters: @dhank and @Kvar 
+Top Gatherer: @dhank
+Top QA report: @YouCrossTheLineAlfie
+
+Awards will be distributed on Ethereum within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to [complete your tax reporting info](https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process#tax-information-for-code4rena-contributors-wardens-judges-etc) if you haven't already. This must be completed within 30 days (i.e. before Saturday, 23 August 2025) to receive your award distribution for this audit.
+
+{Reactions}
+🔥 (7) 🎉 (5) 🚀 (3) 🫡 (3) 👽 (3) 
+
+[07/24/2025 19:02] cloudellie
+Congrats @dhank and @Kvar!
+
+{Reactions}
+❤️ (10) 
+
+[08/22/2025 15:45] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 08/29/2025 15:39. Please make sure to grab anything you might need before then.
+
+
+[08/28/2025 16:35] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 17 message(s)
+==============================================================
